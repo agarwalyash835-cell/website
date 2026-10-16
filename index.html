@@ -175,47 +175,23 @@
 
   <!-- LICENSING -->
   <section class="section" id="licensing">
-    <div class="container">
+    <div class="container narrow">
       <div class="section-head reveal">
         <p class="eyebrow">Licensing</p>
-        <h2>Terms that hold up.</h2>
-        <p>Pricing is based on volume, subjects and exclusivity. Every licence is in writing.</p>
+        <h2>Every licence, built to order.</h2>
+        <p>There are no fixed plans. Each licence is shaped around your project and quoted on enquiry.</p>
       </div>
-      <div class="grid grid-3">
-        <article class="card plan reveal">
-          <h3>Research</h3>
-          <p class="plan-sub">Academic and non-commercial work</p>
-          <ul>
-            <li>Curated subject collections</li>
-            <li>Non-commercial training rights</li>
-            <li>Standard metadata</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" data-plan="Research">Enquire</a>
-        </article>
-        <article class="card plan plan-featured reveal">
-          <p class="plan-tag">Most chosen</p>
-          <h3>Commercial</h3>
-          <p class="plan-sub">Startups and product teams</p>
-          <ul>
-            <li>Full catalogue access</li>
-            <li>Commercial training &amp; fine-tuning</li>
-            <li>Choice of delivery formats</li>
-            <li>Regular catalogue additions</li>
-          </ul>
-          <a href="#contact" class="btn btn-gold" data-plan="Commercial">Enquire</a>
-        </article>
-        <article class="card plan reveal">
-          <h3>Enterprise</h3>
-          <p class="plan-sub">Foundation model builders</p>
-          <ul>
-            <li>Custom corpus assembly</li>
-            <li>Exclusive and semi-exclusive terms</li>
-            <li>Custom formats &amp; chunking</li>
-            <li>Dedicated point of contact</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" data-plan="Enterprise">Enquire</a>
-        </article>
-      </div>
+      <article class="card custom reveal">
+        <h3>What shapes your quote</h3>
+        <ul>
+          <li><strong>Subjects &amp; languages</strong><span>The collections and languages you need</span></li>
+          <li><strong>Volume</strong><span>Number of titles, or total words and tokens</span></li>
+          <li><strong>Permitted use</strong><span>Research, commercial training, fine-tuning or evaluation</span></li>
+          <li><strong>Exclusivity &amp; term</strong><span>Non-exclusive or exclusive, and the licence duration</span></li>
+          <li><strong>Format &amp; delivery</strong><span>TXT, JSONL, EPUB or PDF, one-off or ongoing</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">Enquire for a Quote</a>
+      </article>
     </div>
   </section>
 
@@ -244,8 +220,12 @@
           <p>Yes. Send us your brief and we'll share a representative sample with full metadata before you commit.</p>
         </details>
         <details class="card reveal">
+          <summary>How is pricing decided?</summary>
+          <p>Every licence is custom. We quote based on the subjects, volume, permitted use, exclusivity and delivery you need. Send us your brief for a quote.</p>
+        </details>
+        <details class="card reveal">
           <summary>Do you offer exclusive licences?</summary>
-          <p>Exclusive and semi-exclusive terms are available for selected collections under Enterprise agreements.</p>
+          <p>Yes. Exclusive and semi-exclusive terms are available for selected collections, agreed as part of your custom licence.</p>
         </details>
       </div>
     </div>
@@ -257,7 +237,7 @@
       <div class="section-head reveal">
         <p class="eyebrow">Get in Touch</p>
         <h2>Tell us what your model needs.</h2>
-        <p>Share a short brief and we'll come back with a sample and a quote.</p>
+        <p>Share a short brief and we'll come back with a sample and a custom quote.</p>
       </div>
       <form class="card form reveal" id="contactForm" novalidate>
         <div class="row">
@@ -266,11 +246,12 @@
         </div>
         <div class="row">
           <label>Company<input name="company" autocomplete="organization"></label>
-          <label>Licence
-            <select name="plan" id="planSelect">
+          <label>Intended use
+            <select name="use">
+              <option>Commercial training</option>
+              <option>Fine-tuning</option>
               <option>Research</option>
-              <option selected>Commercial</option>
-              <option>Enterprise</option>
+              <option>Evaluation</option>
               <option>Not sure yet</option>
             </select>
           </label>
@@ -295,15 +276,12 @@
       <a href="#licensing">Licensing</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="footer-mail" href="mailto:hello@grovix.co.in">hello@grovix.co.in</a>
+    <a class="footer-mail" href="mailto:info@grovix.co.in">info@grovix.co.in</a>
     <div class="divider" aria-hidden="true"><span></span><i>✦</i><span></span></div>
     <p class="copyright">© <span id="year">2026</span> Grovix Ventures · India</p>
   </div>
 </footer>
 
-<a href="#contact" class="chat-fab" aria-label="Contact us">
-  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>
-</a>
 
 <script src="script.js"></script>
 </body>

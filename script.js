@@ -1,6 +1,6 @@
 (function () {
   // Contact requests are sent to this address via the visitor's email client.
-  var CONTACT_EMAIL = "hello@grovix.co.in";
+  var CONTACT_EMAIL = "info@grovix.co.in";
 
   var nav = document.querySelector(".nav");
   var toggle = document.getElementById("navToggle");
@@ -40,12 +40,6 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
-  // Plan buttons preselect the license type in the form
-  var planSelect = document.getElementById("planSelect");
-  document.querySelectorAll("[data-plan]").forEach(function (btn) {
-    btn.addEventListener("click", function () { planSelect.value = btn.dataset.plan; });
-  });
-
   // Contact form: validate, then open a pre-filled email
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
@@ -67,7 +61,7 @@
       "Name: " + d.get("name"),
       "Email: " + d.get("email"),
       "Company: " + (d.get("company") || "-"),
-      "License type: " + d.get("plan"),
+      "Intended use: " + d.get("use"),
       "",
       d.get("message")
     ].join("\n");
