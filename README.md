@@ -9,6 +9,7 @@ Static marketing site for Grovix Ventures: licensed, ISBN-certified ebooks for A
 
 No build step. Open `index.html` in a browser, or deploy the folder to any static host (GitHub Pages, Netlify, Vercel).
 
-## Hosting on the Hostinger VPS
 
-`deploy/vps-setup.sh` serves the site at grovix.co.in through the Caddy server FunnelHive already runs on the VPS. Run it as root on the VPS; re-run it to pull the latest site files.
+## Hosting
+
+Served by GitHub Pages from the root of this branch. The `CNAME` file sets the custom domain (grovix.co.in), and `.nojekyll` serves files as-is. Every push to the branch updates the live site.
