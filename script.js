@@ -1,6 +1,6 @@
 (function () {
   // Contact requests are sent to this address via the visitor's email client.
-  var CONTACT_EMAIL = "info@grovix.co.in";
+  var CONTACT_EMAIL = "ebooks.grovix@gmail.com";
 
   var nav = document.querySelector(".nav");
   var toggle = document.getElementById("navToggle");

@@ -1,6 +1,6 @@
 # Grovix website
 
-Static marketing site for Grovix Ventures: licensed, ISBN-certified ebooks for AI and LLM training.
+Static marketing site for Grovix Ventures: licensed ebooks for AI and LLM training.
 
 - `index.html`: page content and sections
 - `styles.css`: design tokens (colours, fonts) live in `:root` at the top
