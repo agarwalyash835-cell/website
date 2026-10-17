@@ -21,7 +21,7 @@
   <div class="container nav-inner">
     <a href="#top" class="logo" aria-label="Grovix Ventures home">GV</a>
     <nav class="nav-links" id="navLinks" aria-label="Primary">
-      <a href="#catalogue">Catalogue</a>
+      <a href="#topics">Topics That Matter</a>
       <a href="#why">Why Grovix</a>
       <a href="#process">Process</a>
       <a href="#licensing">Licensing</a>
@@ -43,9 +43,9 @@
       <h1 class="reveal">Grovix Ventures</h1>
       <div class="divider reveal" aria-hidden="true"><span></span><i>✦</i><span></span></div>
       <p class="tagline reveal">Licensed Ebooks for AI Training</p>
-      <p class="lead reveal">A catalogue of ebooks across subjects, licensed in writing for training AI and large language models. Every title is properly sourced and documented.</p>
+      <p class="lead reveal">Ebooks across the topics that matter, licensed in writing for training AI and large language models. Every title is properly sourced and documented.</p>
       <div class="hero-ctas reveal">
-        <a href="#catalogue" class="btn btn-gold">Explore the Catalogue</a>
+        <a href="#topics" class="btn btn-gold">Explore Topics That Matter</a>
         <a href="#contact" class="btn btn-outline">Request a Sample</a>
       </div>
     </div>
@@ -60,11 +60,11 @@
     </div>
   </section>
 
-  <!-- CATALOGUE -->
-  <section class="section" id="catalogue">
+  <!-- TOPICS -->
+  <section class="section" id="topics">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">The Catalogue</p>
+        <p class="eyebrow">Topics That Matter</p>
         <h2>Every subject, properly licensed.</h2>
         <p>License a single subject or build a custom mix. Every collection comes with the same metadata, so you can filter, balance and audit what goes into your model.</p>
       </div>
@@ -235,6 +235,7 @@
         <p>Share a short brief and we'll come back with a sample and a custom quote.</p>
       </div>
       <form class="card form reveal" id="contactForm" novalidate>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="row">
           <label>Full name<input name="name" required autocomplete="name"></label>
           <label>Work email<input name="email" type="email" required autocomplete="email"></label>
@@ -252,7 +253,7 @@
           </label>
         </div>
         <label>Your brief<textarea name="message" rows="4" required placeholder="Subjects, languages, volume and format"></textarea></label>
-        <button class="btn btn-gold" type="submit">Send Request</button>
+        <button class="btn btn-gold" type="submit" id="submitBtn">Send Request</button>
         <p class="form-note" id="formNote" role="status"></p>
       </form>
     </div>
@@ -266,7 +267,7 @@
     <p class="footer-name">Grovix Ventures</p>
     <p class="footer-about">Licensed ebooks for AI and LLM training.</p>
     <nav class="footer-links" aria-label="Footer">
-      <a href="#catalogue">Catalogue</a>
+      <a href="#topics">Topics That Matter</a>
       <a href="#why">Why Grovix</a>
       <a href="#licensing">Licensing</a>
       <a href="#contact">Contact</a>

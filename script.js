@@ -1,5 +1,5 @@
 (function () {
-  // Contact requests are sent to this address via the visitor's email client.
+  // Contact form submissions are delivered to this address.
   var CONTACT_EMAIL = "ebooks.grovix@gmail.com";
 
   var nav = document.querySelector(".nav");
@@ -40,9 +40,10 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
-  // Contact form: validate, then open a pre-filled email
+  // Contact form: validate, then deliver it to CONTACT_EMAIL via FormSubmit
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
+  var submitBtn = document.getElementById("submitBtn");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var valid = true;
@@ -57,19 +58,37 @@
       return;
     }
     var d = new FormData(form);
-    var body = [
-      "Name: " + d.get("name"),
-      "Email: " + d.get("email"),
-      "Company: " + (d.get("company") || "-"),
-      "Intended use: " + d.get("use"),
-      "",
-      d.get("message")
-    ].join("\n");
-    window.location.href = "mailto:" + CONTACT_EMAIL +
-      "?subject=" + encodeURIComponent("Sample dataset request - " + d.get("name")) +
-      "&body=" + encodeURIComponent(body);
-    note.className = "form-note ok";
-    note.textContent = "Thanks! Your email app should open with your request ready to send.";
+    var payload = {
+      "Name": d.get("name"),
+      "Email": d.get("email"),
+      "Company": d.get("company") || "-",
+      "Intended use": d.get("use"),
+      "Brief": d.get("message"),
+      _replyto: d.get("email"),
+      _subject: "New enquiry from grovix.co.in - " + d.get("name"),
+      _template: "table",
+      _honey: d.get("_honey")
+    };
+    submitBtn.disabled = true;
+    note.className = "form-note";
+    note.textContent = "Sending...";
+    fetch("https://formsubmit.co/ajax/" + CONTACT_EMAIL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+      .then(function (r) {
+        if (!r.ok || String(r.data.success) !== "true") throw new Error(r.data.message || "Send failed");
+        form.reset();
+        note.className = "form-note ok";
+        note.textContent = "Thank you! We've received your request and will be in touch soon.";
+      })
+      .catch(function () {
+        note.className = "form-note err";
+        note.textContent = "Sorry, that didn't go through. Please email us at " + CONTACT_EMAIL + ".";
+      })
+      .finally(function () { submitBtn.disabled = false; });
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
