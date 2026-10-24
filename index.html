@@ -25,6 +25,7 @@
       <a href="#why">Why Grovix</a>
       <a href="#process">Process</a>
       <a href="#licensing">Licensing</a>
+      <a href="#automation">AI &amp; Automation</a>
       <a href="#faq">FAQ</a>
       <a href="#contact" class="btn btn-gold btn-sm">Request a Sample</a>
     </nav>
@@ -189,8 +190,59 @@
           <li><strong>Exclusivity &amp; term</strong><span>Non-exclusive or exclusive, and the licence duration</span></li>
           <li><strong>Format &amp; delivery</strong><span>TXT, JSONL, EPUB or PDF, one-off or ongoing</span></li>
         </ul>
-        <a href="#contact" class="btn btn-gold">Enquire for a Quote</a>
+        <a href="#contact" class="btn btn-gold" data-interest="Ebooks: commercial training">Enquire for a Quote</a>
       </article>
+    </div>
+  </section>
+
+  <!-- AI & AUTOMATION -->
+  <section class="section band" id="automation">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">AI &amp; Automation</p>
+        <h2>Automation that runs your business.</h2>
+        <p>Alongside our data work, we design and build AI agents and automated workflows for growing businesses. WhatsApp-first, multilingual, and built in-house so they evolve with you.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.5L3 21l2-5.4A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 10h7M8.5 13.5h4.5"/></svg>
+          <h3>WhatsApp AI Agents</h3>
+          <p>Answer enquiries, qualify leads and share details around the clock, on the channel your customers already use.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M4 5h8M8 3v2M10 5c-.8 3.5-3 6.2-6 8M6 9c1 2 2.6 3.5 4.5 4.5"/><path d="M12 21l4.5-10L21 21M13.5 18h6"/></svg>
+          <h3>Multilingual Conversations</h3>
+          <p>Agents that reply in English, Hindi and regional languages, so every customer is understood.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M3 4h18l-7 8.5V19l-4 2v-8.5z"/></svg>
+          <h3>Lead Follow-up</h3>
+          <p>Every new lead gets an instant reply and timely reminders, so no enquiry slips through the cracks.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/></svg>
+          <h3>Bookings &amp; Scheduling</h3>
+          <p>Appointments, site visits and demos booked, confirmed and reminded automatically.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3z"/><path d="M9.5 21h5"/></svg>
+          <h3>Knowledge Assistants</h3>
+          <p>Private AI assistants that answer from your own documents, policies and product information.</p>
+        </article>
+        <article class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8.5 6h7M7.3 8.2l3.4 7.6M16.7 8.2l-3.4 7.6"/></svg>
+          <h3>Workflow &amp; CRM Integration</h3>
+          <p>Connect your forms, CRM, sheets and messaging tools so information moves without manual work.</p>
+        </article>
+      </div>
+      <ol class="flow reveal">
+        <li><span>Map</span><p>We study how work flows today and pick what to automate first.</p></li>
+        <li><span>Build</span><p>We design, build and test the agent or workflow with your team.</p></li>
+        <li><span>Run</span><p>We launch, monitor and keep improving it as your business grows.</p></li>
+      </ol>
+      <div class="band-cta reveal">
+        <a href="#contact" class="btn btn-gold" data-interest="AI &amp; automation">Book an Automation Call</a>
+      </div>
     </div>
   </section>
 
@@ -231,8 +283,8 @@
     <div class="container narrow">
       <div class="section-head reveal">
         <p class="eyebrow">Get in Touch</p>
-        <h2>Tell us what your model needs.</h2>
-        <p>Share a short brief and we'll come back with a sample and a custom quote.</p>
+        <h2>Tell us what you need.</h2>
+        <p>Share a short brief about your ebook licensing or automation project and we'll come back with next steps.</p>
       </div>
       <form class="card form reveal" id="contactForm" novalidate>
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -242,17 +294,17 @@
         </div>
         <div class="row">
           <label>Company<input name="company" autocomplete="organization"></label>
-          <label>Intended use
-            <select name="use">
-              <option>Commercial training</option>
-              <option>Fine-tuning</option>
-              <option>Research</option>
-              <option>Evaluation</option>
+          <label>Enquiry about
+            <select name="use" id="interestSelect">
+              <option>Ebooks: commercial training</option>
+              <option>Ebooks: fine-tuning</option>
+              <option>Ebooks: research or evaluation</option>
+              <option>AI &amp; automation</option>
               <option>Not sure yet</option>
             </select>
           </label>
         </div>
-        <label>Your brief<textarea name="message" rows="4" required placeholder="Subjects, languages, volume and format"></textarea></label>
+        <label>Your brief<textarea name="message" rows="4" required placeholder="For ebooks: subjects, languages, volume and format. For automation: what you'd like to automate."></textarea></label>
         <button class="btn btn-gold" type="submit" id="submitBtn">Send Request</button>
         <p class="form-note" id="formNote" role="status"></p>
       </form>
@@ -270,6 +322,7 @@
       <a href="#topics">Topics That Matter</a>
       <a href="#why">Why Grovix</a>
       <a href="#licensing">Licensing</a>
+      <a href="#automation">AI &amp; Automation</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="footer-mail" href="mailto:ebooks.grovix@gmail.com">ebooks.grovix@gmail.com</a>

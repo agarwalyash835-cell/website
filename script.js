@@ -40,6 +40,12 @@
     items.forEach(function (el) { el.classList.add("in"); });
   }
 
+  // Buttons that lead to the form preselect the enquiry type
+  var interestSelect = document.getElementById("interestSelect");
+  document.querySelectorAll("[data-interest]").forEach(function (btn) {
+    btn.addEventListener("click", function () { interestSelect.value = btn.dataset.interest; });
+  });
+
   // Contact form: validate, then deliver it to CONTACT_EMAIL via FormSubmit
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
@@ -62,7 +68,7 @@
       "Name": d.get("name"),
       "Email": d.get("email"),
       "Company": d.get("company") || "-",
-      "Intended use": d.get("use"),
+      "Enquiry about": d.get("use"),
       "Brief": d.get("message"),
       _replyto: d.get("email"),
       _subject: "New enquiry from grovix.co.in - " + d.get("name"),
