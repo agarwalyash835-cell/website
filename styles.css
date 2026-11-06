@@ -163,9 +163,31 @@ p { margin: 0; }
 }
 .flow { list-style: none; padding: 0; margin: 56px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .flow li { padding: 26px 4px 0; border-top: 1px solid var(--line); }
-.flow span { display: block; font-family: var(--serif); font-size: 1.7rem; color: var(--gold); margin-bottom: 6px; }
+.flow span { display: block; font-family: var(--serif); font-variant-numeric: lining-nums; font-size: 1.7rem; color: var(--gold); margin-bottom: 6px; }
 .flow p { color: var(--muted); }
 .band-cta { text-align: center; margin-top: 48px; }
+
+/* Brands */
+.brands-section { padding-top: 100px; }
+.brands { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.brand { display: flex; flex-direction: column; padding: 40px 36px; }
+.brand-top { display: flex; align-items: center; gap: 14px; }
+.logo-sm { width: 44px; height: 44px; font-size: 1.1rem; }
+.hive-mark { width: 44px; height: 44px; flex: none; }
+.brand-kind { color: var(--gold) !important; font-size: .74rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; }
+.brand h3 { font-size: 2.2rem; margin: 24px 0 12px; }
+.brand-points { list-style: none; padding: 0; margin: 22px 0 28px; flex: 1; }
+.brand-points li { position: relative; padding: 9px 0 9px 24px; border-top: 1px solid var(--line-soft); font-size: .95rem; }
+.brand-points li::before { content: "✦"; position: absolute; left: 0; top: 10px; font-size: .68rem; color: var(--gold); }
+.brand-link { color: var(--gold); font-weight: 500; }
+.brand-link:hover { color: var(--gold-soft); }
+
+/* AIHive */
+.hive-lockup { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px; font-family: var(--serif); font-size: 2rem; color: var(--text); }
+.hive-lockup .hive-mark { width: 40px; height: 40px; }
+.hive-perks { margin-top: 44px; padding: 22px 0; border-block: 1px solid var(--line-soft); }
+.band-cta.hero-ctas { margin-top: 40px; }
+.faq details p a { color: var(--gold); }
 
 /* FAQ */
 .faq { display: grid; gap: 16px; }
@@ -240,7 +262,8 @@ p { margin: 0; }
   .band { margin-top: 90px; padding-bottom: 90px; }
 }
 @media (max-width: 640px) {
-  .grid-4, .grid-3, .form .row, .flow { grid-template-columns: 1fr; }
+  .grid-4, .grid-3, .form .row, .flow, .brands { grid-template-columns: 1fr; }
+  .brand { padding: 32px 26px; }
   .hero-ctas { flex-direction: column; align-items: center; }
   .hero-ctas .btn { width: min(100%, 300px); }
   .tagline { font-size: .98rem; letter-spacing: .16em; }
